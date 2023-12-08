@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:url(https://media.istockphoto.com/id/973139084/photo/man-hands-using-online-banking-and-icon-on-tablet-screen-device-in-coffee-shop-technology-e.jpg?s=2048x2048&w=is&k=20&c=74u1f02tW3OuOb7JyBHf7y5Mp_8gSdmRpbvgKDilYC0=);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 90%;
+            max-width: 620px;
+            background: transparent;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+            display: grid;
+            gap: 1rem;
+            margin-top: 110px;
+        }
+        .container1 {
+            width: 90%;
+            max-width: 620px;
+            background: transparent;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+            display: grid;
+            gap: 1rem;
+            margin-top: 20px;
+        }
+        .container2 {
+            width: 250px;
+            max-width: 420px;
+            background: lightseagreen;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+            margin-top: 20px;
+        }
+        div {
+            margin: 20px;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4c4faf;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .one {
+            width: 350px;
+            justify-content: center;
+        }
+        .two {
+            text-align: center;
+            color: #14141e;
+        }
+    </style>
+</head>
+<body>
+    <div class="two">
+        <h1>Welcome User</h1>
+        <h4>Online Banking Services</h4>
+    </div>
+    <div class="container">
+        <div>
+            <h3><center>Deposit</center></h3>
+        </div>
+        <div>
+            <input type="text" id="depositAmount" placeholder="Enter Your Amount">
+            <input type="text" id="depositAccountNumber" placeholder="Enter Your Account Number ">
+            <br>
+            <button onclick="deposit()">Deposit</button>
+        </div>
+    </div>
+    <div class="container1">
+        <div>
+            <h3><center>Withdraw</center></h3>
+        </div>
+        <div>
+            <input type="text" id="withdrawAmount" placeholder="Enter Your Amount">
+            <input type="text" id="withdrawAccountNumber" placeholder="Enter Your Account Number ">
+            <br>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+    </div>
+
+    <script>
+        function deposit() {
+            var amount = document.getElementById('depositAmount').value;
+            var accountNumber = document.getElementById('depositAccountNumber').value;
+
+            // Check if the input fields are not empty
+            if (amount && accountNumber) {
+                alert('Deposit Successful!\nAmount: ' + amount + '\nAccount Number: ' + accountNumber);
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        }
+
+        function withdraw() {
+            var amount = document.getElementById('withdrawAmount').value;
+            var accountNumber = document.getElementById('withdrawAccountNumber').value;
+
+            // Check if the input fields are not empty
+            if (amount && accountNumber) {
+                alert('Withdrawal Successful!\nAmount: ' + amount + '\nAccount Number: ' + accountNumber);
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        }
+    </script>
+</body>
+</html>
